@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;1,600&display=swap');
+
+/* GENERAL (Body, website margins) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background: linear-gradient(115deg, #71b7e6, #9b59b6); */
+    animation: boy_background 10s infinite;
+    background-image: linear-gradient(115deg, #71b7e6, #0c88db, #5124ba, #6503c8, /*#8b6edb,*/ #9b59b6);
+    background-size: 1000%; 
+    animation: body-background 15s infinite alternate-reverse;
+    /* transition: background-position 1s; */
+}
+body:hover {
+    /* background-position: right; */
+}
+/* End GENERAL (Body, website margins) */
+
+/* Navigation Bar */
+nav {
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    /* position: fixed; only if fixed  */
+    /* margin-top: -150px; only if fixed 
+    background: linear-gradient(115deg, #71b7e6, #9b59b6); */
+}
+nav ul {
+    display: flex;
+}
+nav ul a {
+    flex-basis: 10%;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    border: 0px solid red;
+    margin: auto 3px;
+    padding: 20px;
+    box-shadow: rgba(30, 77, 123, .7) 10px 18px 24px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    animation:  nav_bar_hover_off ease-in-out .5s forwards;
+    background-color: none;
+    transition: .9s;
+}
+nav ul a:nth-child(1) { 
+    background-image: linear-gradient(315deg, #26c2c2 0%, #ab55a8 74%);
+}
+nav ul a:nth-child(2), nav ul a:nth-child(3) {
+    padding: 10px;
+}
+nav ul a:hover {
+    background-color: white;
+    transition: .3s;
+    opacity: 88%;
+    color: black;
+    animation:  nav_bar_hover_on ease-in-out .5s forwards;
+    box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
+}
+/* End Navigation BAR */
+
+/* Body */
+.title-about-section {
+    /* margin-top: 150px; only if fixed */
+    margin-top: 35px;
+    border: 0px solid black;
+    display: flex;
+}
+    /* Title */
+    .title {
+        width: 100%;
+        /* margin: auto; */
+        text-align: left;
+        padding: auto;
+        flex-basis: 50%;
+        margin: 67px;
+        margin-left: 120px;
+    }   
+    .title h1 {
+        font-size: 35px;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 5px;
+        line-height: 65px;
+    }
+    .title h1 span:nth-child(1), .title h1 span:nth-child(2) {
+        background: -webkit-linear-gradient(115deg, rgb(52, 43, 85), rgb(13, 14, 107));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* border: 1px solid black; */
+        /* padding-left: 35px; */
+    }
+    .title h1 span:nth-child(4), .title h1 span:nth-child(5) {
+        background: -webkit-linear-gradient(rgb(184, 176, 176), rgb(241, 239, 239));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 40px;
+    }
+    .title h1 span:nth-child(2) {
+        padding-right: 100px;
+    }
+    .title h1 span {
+        animation: title-letters-off .1s forwards ease-in-out;
+    }
+    .title h1 span:hover {
+        animation: title-letters .4s forwards ease-in-out;
+        margin: 15px 5px;
+        padding-top: 15px;
+        transition: 0.52s ease-in-out;
+        background: linear-gradient(115deg, #1d92e0, #8f1fbb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor:default;
+        box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
+    }
+    /* End Title */
+    
+    /* Introduction */
+    .introduction-page {
+        flex-basis: 50%;
+        /* border: 2px solid rgb(14, 12, 12); */
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    .about h1 {
+        color: aliceblue;
+    }    
+    .about {
+        margin-top: 27px;
+        flex-basis: 50%;
+        cursor: pointer;
+        /* border: 1px solid black; */
+        height: 200px;
+        width: 80%;
+        border-radius: 10px;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: linear-gradient(200deg, #42aaf0, #318ecd, #0533bd); */
+        box-shadow: rgba(42, 67, 92, 4.7) 10px 20px 30px 5px;
+    }
+    .introduction-page .about .content .arrow {
+        color: white;
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 0;
+        opacity: 0;   
+        margin: -35px 0 0 0;
+        animation: arrow-hover-off 1s forwards;
+    }
+    .introduction-page .about:hover .arrow {
+        animation: arrow-hover 1s forwards;
+    }
+    input[type="checkbox"]:checked ~ .about-page {
+        display: none;
+    }
+    .about-page {
+        margin-top: 45px;
+        height: 777px;
+        border: 10px solid red;
+    }
+    /* End Introduction */
+/* End Body */
+
+/* Keyframes (Animations) */
+    /* Body Animation Keyframe */
+    @keyframes body-background {
+        0% {
+            background-position: left;
+        }
+        100% {
+            background-position: right;
+        }
+    }
+    /* End Body Animation Keyframe */
+
+    /* Nav Bar Keyframes */
+    @keyframes nav_bar_hover_on {
+        100% {
+            margin-left: 33px;
+            margin-right: 33px;
+            padding-left: 43px;
+            padding-right: 43px;
+        }
+        0% {}
+    }
+    @keyframes nav_bar_hover_off {
+        0% {
+            margin-left: 33px;
+            margin-right: 33px;
+            padding-left: 33px;
+            padding-right: 33px;
+        }
+        100% {}
+    }
+    /* End Nav Bar Keyframes */
+
+    /* Title keyframes */
+    @keyframes title-letters {
+        0% {}
+        100% {
+            font-size: 55px;
+        } 
+    }
+    @keyframes title-letters-off {
+        100% {}
+        0% {
+            font-size: 55px;
+        } 
+    }
+    /* End Title keyframes */
+
+    /* Introduction page keyframes */
+    @keyframes about {
+        0% {}
+        50% {
+            opacity: blue 50%;
+            background: linear-gradient(200deg, #318ecd,#42aaf0, #0533bd);
+        }
+        75% {
+            background: linear-gradient(200deg, #318ecd, #0533bd),#42aaf0;
+            opacity: blue 80%;
+        }
+        100% {
+            opacity: 50%; 
+            background: linear-gradient(200deg,#0533bd, #318ecd,  #42aaf0);
+        }
+    }
+    @keyframes arrow-hover {
+        0% {}
+        100% {
+            opacity: 100%;
+            margin-top: 15px;
+        }
+    }
+    @keyframes arrow-hover-off {
+        0% {
+            opacity: 100%;
+            margin-top: 15px;
+        }
+        100% {
+            opacity: 0;   
+            margin: -35px 0 0 0;
+        }
+    }
+    /* End Introduction page keyframes */
+/* End Keyframes (Animations) */
