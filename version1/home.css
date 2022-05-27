@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(115deg, #71b7e6, #9b59b6);
+}
+
+/* Navigation Bar */
+nav {
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    /* position: fixed; only if fixed */
+    /* margin-top: -150px; only if fixed */
+    /* background: linear-gradient(115deg, #71b7e6, #9b59b6); */
+}
+nav ul {
+    display: flex;
+}
+nav ul a {
+    flex-basis: 10%;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    border: 0px solid red;
+    margin: auto 3px;
+    padding: 20px;
+    box-shadow: rgba(30, 77, 123, .7) 10px 18px 24px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    animation:  nav_bar_hover_off ease-in-out .5s forwards;
+}
+nav ul a:nth-child(2), nav ul a:nth-child(3) {
+    padding: 10px;
+}
+nav ul a:hover {
+    background-color: white;
+    opacity: 88%;
+    color: black;
+    animation:  nav_bar_hover_on ease-in-out .5s forwards;
+    box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
+}
+/* End Navigation BAR */
+
+/* Body */
+.body-page {
+    /* margin-top: 150px; only if fixed */
+    margin-top: 35px;
+    border: 0px solid black;
+}
+    /* Title */
+    .title {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: auto;
+    }   
+    .title h1 {
+        font-size: 38px;
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        letter-spacing: 25px;
+        line-height: 75px;
+        background: -webkit-linear-gradient(rgb(184, 176, 176), rgb(241, 239, 239));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .title h1 span {
+        animation: title-letters-off .1s forwards ease-in-out;
+    }
+    .title h1 span:hover {
+        animation: title-letters .4s forwards ease-in-out;
+        margin: auto 5px;
+        transition: 0.52s ease-in-out;
+        background: linear-gradient(115deg, #1d92e0, #8f1fbb);;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    /* End Title */
+    
+    /* Introduction */
+    .introduction-page {
+        border: 0px solid black;
+        margin: auto;
+        width: 80%;
+        display: flex;
+        margin-top: 80px;
+        height: 700px;
+        margin-bottom: 150px;
+    }
+    .introduction-page .red-box {
+        height: 670px;
+        flex-basis: 50%;
+        border: 0px solid black;
+        padding: 25px;
+        margin-right: 15px;
+        border-radius: 7%;
+        /* background-color: rgb(223, 3, 3); */
+        background-color: #0cbaba;
+        background-image: linear-gradient(315deg, #26c2c2 0%, #ab55a8 74%);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .introduction-page .green-box {
+        height: 700px;
+        flex-basis: 50%;
+        border: 0px solid black;
+        background-color: rgb(26, 104, 6);
+        margin-left: 15px;
+    }
+    /* End Introduction */
+/* End Body */
+
+/* Keyframes (Animations) */
+    /* Nav Bar Keyframes */
+    @keyframes nav_bar_hover_on {
+        100% {
+            margin-left: 33px;
+            margin-right: 33px;
+            padding-left: 43px;
+            padding-right: 43px;
+        }
+        0% {}
+    }
+    @keyframes nav_bar_hover_off {
+        0% {
+            margin-left: 33px;
+            margin-right: 33px;
+            padding-left: 33px;
+            padding-right: 33px;
+        }
+        100% {}
+    }
+    /* End Nav Bar Keyframes */
+    /* Title keyframes */
+    @keyframes title-letters {
+        0% {}
+        100% {
+            font-size: 95px;
+        } 
+    }
+    @keyframes title-letters-off {
+        100% {}
+        0% {
+            font-size: 95px;
+        } 
+    }
+    /* End Title keyframes */
+/* End Keyframes (Animations) */
